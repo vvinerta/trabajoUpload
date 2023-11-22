@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Franklin Gothic Medium';
+}
+
+/** Estilos HEADER*/
+header{
+    height: 10%;
+    background-color: purple;
+}
+
+header ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 15px 100px;
+    font-size: x-large;
+    color: white;
+}
+
+header ul li:hover{
+    cursor: pointer;
+    box-shadow: 0px 5px white;
+}
+
+/** Estilos CONTENIDO*/
+
+/**Imagen de ocultacion*/
+.imagenContenedor{
+    max-width: 100%;
+    max-height: 90%;
+    display: none;
+}
+
+.imagenContenedor img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 91.85vh;
+    width: auto;
+    height: auto;
+    margin: auto;
+
+}
+
+/**Listado*/
+
+.contenedorListado{
+
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.divDatos{
+    background-color: red;
+    display: grid;
+    grid-template-columns: auto;
+}
