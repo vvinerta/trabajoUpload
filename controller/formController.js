@@ -7,6 +7,15 @@ const txtComentario = document.getElementById("txtComentario");
 const txtUrlFoto = document.getElementById("txtUrlFoto");
 const btnGuardar = document.getElementById("btnGuardar");
 
+selTipo.addEventListener('change',function(){
+    if(selTipo.value == "cargado"){
+        txtFecha.disabled = false;
+    }else{
+        txtFecha.disabled = true;
+        txtFecha.value = "";
+    }
+});
+
 
 function fechaMaximaHoy(){
     var today = new Date().toISOString().split('T')[0];
@@ -106,36 +115,4 @@ function modificarSujeto(index){
 
 }
 
-function anadirOmodificar(){
-
-    let arrayDatos = cargarDatosLocalStorage();
-    let arrayNombres = [];
-    let arrayID = [];
-    let modificar = false;
-    const nombre = txtNombre.value;
-    let index = 0;
-
-    arrayDatos.forEach(sujeto => {
-        arrayNombres.push(sujeto.nombre); 
-        arrayID.push(sujeto.id);
-    });
-
-    arrayNombres.forEach(nom =>{
-        if(nom == nombre){
-            index = arrayNombres.findIndex((elemento) => elemento === nombre);
-            if(arrayID[index]!= undefined){
-                modificar = true;
-            }else{
-                modificar = false;
-            }
-        }
-    });
-
-    if(modificar == true){
-        modificarSujeto(index);
-    }else{
-        anadirSujeto();
-    }
-
-}
 
