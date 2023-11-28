@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../model/sujeto.js"defer></script>
+    <script src="../repository/localStorage.repository.js" defer></script>
     <script src="../controller/indexController.js" defer></script>
+    <script src="../controller/formController.js" defer></script>
     <title>Upload</title>
     
 </head>
 <body>
     <header>
         <ul>
-            <li>Agregar sujeto</li>
+            <li onclick="mostrarFormulario()">Agregar sujeto</li>
             <li onclick="ocultarContenido()">Ocultar</li>
         </ul>
     </header>
@@ -19,17 +22,32 @@
         <img src="../assets/fondoLakeView.jpg" alt="imagen de fondo de Lakeview">
     </div>
     <div id="contenedorListado" class="contenedorListado">
-        <div class="card">
-            <div class="divImagen">
-                <picture>
-                    <img src="" alt="">
-                </picture>
-            </div>
-            <div class="divDatos">
-                <input type="text">
-                <input type="text">
-            </div>
-        </div>
+        
+    </div>
+    <div id="contenedorFormulario" class="contenedorFormulario">
+        <form action="" onsubmit="return false">
+            <label for="txtNombre">Nombre : </label>
+            <input type="text" id="txtNombre" required><br>
+            <label for="txtDireccion">Direccion : </label>
+            <input type="text" id="txtDireccion" required><br>
+            <label for="txtUrlFoto">Url foto : </label>
+            <input type="text" id="txtUrlFoto" required><br>
+            <select name="selTipo" id="selTipo" required>
+                <option value="" disabled selected>Seleccione un tipo</option>
+                <option value="vivo">vivo</option>
+                <option value="cargado">cargado</option>
+            </select><br>
+            <select name="selCulpabilidad" id="selCulpabilidad" required>
+                <option value="" disabled selected>Seleccione culpabilidad</option>
+                <option value="posiblecooperador">posible cooperador</option>
+                <option value="cooperador">cooperador</option>
+                <option value="delincuente">delincuente</option>
+            </select><br>
+            <input type="date" id="txtFecha" ><br>
+            <textarea name="txtComentario" id="txtComentario" cols="30" rows="10"></textarea><br>
+            <button type="submit"id="btnGuardar" onclick="anadirSujeto()">Guardar</button>
+            <button style="margin-left: 80px;" type="reset" onclick="ocultarFormulario()">Cancelar</button>
+        </form>
     </div>
     
 </body>

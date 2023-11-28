@@ -3,6 +3,8 @@ body{
     padding: 0;
     height: 100%;
     font-family: 'Franklin Gothic Medium';
+    background-color: #faf8fe;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23ed00cd' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 /** Estilos HEADER*/
@@ -51,16 +53,119 @@ header ul li:hover{
 /**Listado*/
 
 .contenedorListado{
-
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 3px solid black;
+    width: fit-content;
+    background-color: purple;
+    padding: 10px;
+    border-radius: 15px;
 }
 
 .card{
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
 
+.card img:hover{
+    cursor: pointer;
+}
+
+.divImagen{
+}
+
+.divImagen img{
+    width: 100px;
+    height: 100px;
+}
+
 .divDatos{
-    background-color: red;
     display: grid;
     grid-template-columns: auto;
+}
+
+.divDatos p{
+    margin-left: 15px;
+}
+
+/**Formulario*/
+
+.contenedorFormulario{
+    display: none;
+    margin-top: 20px;
+}
+
+
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    width: fit-content;
+    border: 3px solid black;
+    padding: 30px;
+    background-color: purple;
+    border-radius: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+button {
+    background-color: white;
+    color: purple;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: yellow;
 }
